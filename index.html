@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Marine Pollution and Noise Tracker</title>
+</head>
+<body>
+  <header>
+    <h1>Marine Pollution and Noise Tracker</h1>
+    <button id="toggle-dark-mode">Toggle Dark Mode</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </header>
+  
+  <main>
+    <section id="pollution-section">
+      <h2>Marine Pollution</h2>
+      <div id="pollution-data"></div>
+      <button onclick="fetchPollutionData()">Simulate Pollution Data</button>
+    </section>
+
+    <section id="noise-section">
+      <h2>Underwater Noise Types</h2>
+      <div id="noise-data"></div>
+      <button onclick="fetchNoiseData()">Simulate Noise Data</button>
+    </section>
+
+    <section id="real-time-section">
+      <h2>Real-Time Ocean Data (NOAA)</h2>
+      <button onclick="fetchRealTimeData()">Fetch Real-Time Data</button>
+      <div id="real-time-data"></div>
+    </section>
+
+    <section id="map-section">
+      <h2>Interactive Map</h2>
+      <div id="map" style="height: 300px;"></div>
+    </section>
+
+    <section id="custom-data-section">
+      <h2>Custom Data Input</h2>
+      <input type="text" id="custom-input" placeholder="Enter custom data">
+      <button onclick="saveCustomData()">Save Data</button>
+      <div id="saved-data"></div>
+    </section>
+
+    <button onclick="exportToPDF()">Export Data to PDF</button>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="script.js"></script>
+</body>
+</html>
